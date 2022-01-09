@@ -1,0 +1,289 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/* Camphor
+   -------------------------------------------------------------------------------------------- */
+/* Camphor Light */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 300;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Light.woff");
+}
+/* Camphor Regular */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 400;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Regular.woff");
+}
+/* Camphor Medium */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 500;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Medium.woff");
+}
+/* Camphor Bold */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 600;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Bold.woff");
+}
+/* Tiempos Headline
+ -------------------------------------------------------------------------------------------- */
+/* Tiempos Headline Regular */
+@font-face {
+  font-display: swap;
+  font-family: "TiemposHeadline";
+  font-weight: 400;
+  src: url("https://fonts.hlxcdn.com/fonts/tiempos-headline/TiemposHeadlineWeb-Regular.woff");
+}
+/* TT Norms
+   -------------------------------------------------------------------------------------------- */
+/* TT Norms Regular */
+@font-face {
+  font-display: swap;
+  font-family: "TTNorms";
+  font-weight: 400;
+  src: url("https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Regular.woff");
+}
+/* TT Norms Medium */
+@font-face {
+  font-display: swap;
+  font-family: "TTNorms";
+  font-weight: 500;
+  src: url("https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Medium.woff");
+}
+/* TT Norms Bold */
+@font-face {
+  font-display: swap;
+  font-family: "TTNorms";
+  font-weight: 700;
+  src: url("https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Bold.woff");
+}
+hr {
+  margin: 62px 0;
+}
+
+.--fullHeight {
+  height: 100%;
+}
+
+.--justify-content-center-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.--flex-direction-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.--align-text-center {
+  text-align: center;
+}
+
+.card {
+  border: none;
+  font-family: "TTNorms";
+  line-height: 26px;
+  color: #383838;
+}
+.card .card__heading {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.card__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.section__heading {
+  font-family: "TTNorms";
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  color: #363636;
+  margin-bottom: 60px;
+}
+
+/*         navifation  */
+.navigation {
+  background-color: #fff !important;
+  height: 80px;
+}
+.navigation .navbar {
+  height: 100%;
+}
+.navigation .navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.navigation .nav-link {
+  font-family: "Camphor";
+  font-weight: 500;
+}
+.navigation .nav-item {
+  margin: 0 1%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main {
+  background: no-repeat center url("../../images/research-hero-desktop.png");
+  width: 100%;
+  height: 474px;
+}
+.main .main__headings__container .main__heading {
+  font-family: "TTNorms";
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin-bottom: 5%;
+}
+.main .main__headings__container .main__subtitle {
+  font-family: "TTNorms";
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.compromises {
+  margin-top: 60px;
+}
+.compromises .compromises__subtitle {
+  font-family: "TTNorms";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #383838;
+}
+.compromises .compromises__card {
+  font-family: "TTNorms";
+  line-height: 26px;
+  font-weight: 400;
+}
+.compromises .compromises__card .compromises__card__heading {
+  color: #404c77;
+  font-weight: 700;
+}
+
+.metrics__maters {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.benefiits {
+  background: #f4f4f4;
+}
