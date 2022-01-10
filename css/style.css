@@ -139,6 +139,10 @@ hr {
   margin: 62px 0;
 }
 
+.active {
+  color: #4b94c6;
+}
+
 .--fullHeight {
   height: 100%;
 }
@@ -147,9 +151,18 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.--justify-content-space-between-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
 }
 
 .--flex-direction-column {
@@ -163,6 +176,26 @@ hr {
   text-align: center;
 }
 
+.--align-text-start {
+  text-align: start;
+}
+
+.--bold {
+  font-weight: bold;
+}
+
+.--underlined {
+  text-decoration: underline;
+}
+
+.--margin-none {
+  margin: 0 !important;
+}
+
+.--padding-none {
+  padding: 0 !important;
+}
+
 .card {
   border: none;
   font-family: "TTNorms";
@@ -171,12 +204,27 @@ hr {
 }
 .card .card__heading {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .card__subtitle {
+  font-family: "TTNorms";
   font-weight: 400;
   font-size: 14px;
+}
+
+.card-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__subtitle {
+  font-family: "TTNorms";
+  font-size: 16px;
+  color: #383838;
+  margin-bottom: 60px;
 }
 
 .section__heading {
@@ -185,7 +233,7 @@ hr {
   font-size: 34px;
   line-height: 40px;
   color: #363636;
-  margin-bottom: 60px;
+  margin: 20px 0;
 }
 
 /*         navifation  */
@@ -204,6 +252,7 @@ hr {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  background-color: #fff;
 }
 .navigation .nav-link {
   font-family: "Camphor";
@@ -211,6 +260,95 @@ hr {
 }
 .navigation .nav-item {
   margin: 0 1%;
+}
+
+.announcment-bar {
+  background-color: #a0c5db;
+  padding: 12px 0;
+}
+.announcment-bar .announcment-bar__text {
+  color: #fff;
+  font-family: "TTNorms";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.benefits {
+  background-color: #f4f4f4;
+  padding-bottom: 60px;
+}
+.benefits .text-w-tabs-desktop {
+  color: #ababab;
+  line-height: 26px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.benefits .text-w-tabs-desktop__stats {
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+          box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+  background-color: #fff;
+  padding: 60px 60px 120px;
+}
+.benefits .text-w-tabs-mobile__stats {
+  display: none;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+          box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+  background-color: #fff;
+  padding: 20px;
+}
+.benefits .text-w-tabs-mobile__stats .stats__image-mobile {
+  margin: 20px 0 40px;
+}
+
+.future {
+  font-family: "TTNorms";
+}
+.future .future__image__container {
+  width: 100%;
+}
+.future .future__card-heading {
+  font-weight: 600;
+  color: #383838;
+  font-size: 20px;
+  line-height: 30px;
+}
+.future .future__image__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.future .fututre__image {
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+          box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+  background-color: #fff;
+  width: 100%;
+  height: 95%;
+  margin-bottom: 20px;
+}
+.future .fututre__image-mobile {
+  display: none;
+}
+.future .next-button-span {
+  border-style: solid;
+  border-color: #333;
+  border-width: 0 2px 2px 0;
+  padding: 4px 11px;
+  cursor: pointer;
+}
+.future .next-button-active {
+  -webkit-transform: rotate(225deg) !important;
+          transform: rotate(225deg) !important;
+}
+.future .next-button {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .swiper {
@@ -242,48 +380,24 @@ hr {
      object-fit: cover;
 }
 
-.main {
-  background: no-repeat center url("./../images/research-hero-desktop.png");
-  width: 100%;
-  height: 474px;
-}
-.main .main__headings__container .main__heading {
-  font-family: "TTNorms";
-  font-weight: 600;
-  font-size: 3.5rem;
-  margin-bottom: 5%;
-}
-.main .main__headings__container .main__subtitle {
-  font-family: "TTNorms";
-  font-weight: 400;
-  font-size: 1.5rem;
-}
+@media (max-width: 576px) {
+  .text-w-tabs-desktop {
+    display: none;
+  }
 
-.compromises {
-  margin-top: 60px;
-}
-.compromises .compromises__subtitle {
-  font-family: "TTNorms";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  color: #383838;
-}
-.compromises .compromises__card {
-  font-family: "TTNorms";
-  line-height: 26px;
-  font-weight: 400;
-}
-.compromises .compromises__card .compromises__card__heading {
-  color: #404c77;
-  font-weight: 700;
-}
+  .text-w-tabs-desktop__stats {
+    display: none;
+  }
 
-.metrics__maters {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
+  .text-w-tabs-mobile__stats {
+    display: block !important;
+  }
 
-.benefiits {
-  background: #f4f4f4;
+  .future .future__image__container {
+    display: none !important;
+  }
+
+  .fututre__image-mobile {
+    display: block !important;
+  }
 }

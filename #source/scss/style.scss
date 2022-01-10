@@ -98,13 +98,21 @@ hr{
 
 // decorators
 
+.active{
+    color: #4b94c6
+}
+
 .--fullHeight{
     height: 100%;
 }
 
 .--justify-content-center-flex{
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
+}
+.--justify-content-space-between-flex{
+    display: flex;
+    justify-content: space-between !important;
 }
 .--flex-direction-column{
     flex-direction: column;
@@ -112,6 +120,23 @@ hr{
 
 .--align-text-center{
     text-align: center;
+}
+
+.--align-text-start{
+    text-align: start;
+}
+
+.--bold{
+    font-weight: bold;
+}
+.--underlined{
+    text-decoration: underline;
+}
+.--margin-none{
+    margin: 0 !important;
+}
+.--padding-none{
+    padding: 0 !important;
 }
 
 // cards 
@@ -122,12 +147,28 @@ hr{
     color: #383838;
     .card__heading{
         font-weight: 700;
-        font-size: 20px;
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 }
 .card__subtitle{
+    font-family: "TTNorms";
     font-weight: 400;
     font-size: 14px;
+}
+.card-header{
+    align-items: center;
+}
+
+
+
+// sections
+
+.section__subtitle{
+    font-family: "TTNorms";
+    font-size: 16px;
+    color: #383838;
+    margin-bottom: 60px;
 }
 
 .section__heading{
@@ -136,7 +177,7 @@ hr{
     font-size: 34px;
     line-height: 40px;
     color: #363636;
-    margin-bottom: 60px;
+    margin: 20px 0;
 }
 
 /*         navifation  */
@@ -151,6 +192,7 @@ hr{
         display: flex;
         width: 100%;
         justify-content: flex-end;
+        background-color: #fff;
     }
     .nav-link{
         font-family: 'Camphor';
@@ -161,8 +203,97 @@ hr{
     }
 }
 
-// swiper 
+// announcment bar 
 
+.announcment-bar{
+    background-color: #a0c5db;
+    padding: 12px 0;
+    .announcment-bar__text{
+        color: #fff;
+        font-family: "TTNorms";
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+
+// benefits 
+
+.benefits{
+    background-color: #f4f4f4;
+    padding-bottom: 60px;
+    .text-w-tabs-desktop{
+        color: #ababab;
+        line-height: 26px;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .text-w-tabs-desktop__stats{
+        border-radius: 3px;
+        box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+        background-color: #fff;
+        padding: 60px 60px 120px;
+    }
+    .text-w-tabs-mobile__stats{
+        display: none;
+        border-radius: 3px;
+        box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+        background-color: #fff;
+        padding: 20px;
+        .stats__image-mobile{
+            margin: 20px 0 40px;
+        }
+    }
+    
+}
+
+// future 
+
+.future{
+    font-family: "TTNorms";
+    .future__image__container{
+        width: 100%;
+    }
+    .future__card-heading{
+        font-weight: 600;
+        color: #383838;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .future__image__container{
+        display: flex;
+        justify-content: center;
+    }
+    .fututre__image{
+        border-radius: 3px;
+        box-shadow: 0 0 44px 10px rgba(216, 216, 216, 0.5);
+        background-color: #fff;
+        width: 100%;
+        height: 95%;
+        margin-bottom: 20px;
+    }
+    .fututre__image-mobile{
+        display: none;
+    }
+    .next-button-span{
+        border-style: solid;
+        border-color: #333;
+        border-width: 0 2px 2px 0;
+        padding: 4px 11px;
+        
+        cursor: pointer;
+    }
+    .next-button-active{
+        transform: rotate(225deg)!important;
+    }
+    .next-button{
+        transform: rotate(45deg);
+    }
+}
+
+
+//swiper
 .swiper {
     width: 100%;
     height: 100%;
@@ -195,59 +326,80 @@ hr{
     object-fit: cover;
   }
 
-//         main section
-.main{
-    background: no-repeat center url("./../images/research-hero-desktop.png");
-    width: 100%;
-    height: 474px;
-    .main__headings__container{
-        .main__heading{
-            font-family: "TTNorms";
-            font-weight: 600;
-            font-size: 3.5rem;
-            margin-bottom: 5%;
-        }
-        .main__subtitle{
-            font-family: "TTNorms";
-            font-weight: 400;
-            font-size: 1.5rem;
-        }
+  
+  @media (max-width: 576px) {
+      .text-w-tabs-desktop{
+          display: none;
     }
-}
-
-//compromises
-
-.compromises{
-    margin-top: 60px;
-    .compromises__subtitle{
-        font-family: "TTNorms";
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        color: #383838;
+    .text-w-tabs-desktop__stats{
+        display: none;
+    }
+    .text-w-tabs-mobile__stats{
+        display: block !important;
+    }
+    .future{
         
-    }
-    .compromises__card{
-        font-family: "TTNorms";
-        line-height: 26px;
-        font-weight: 400;
-        .compromises__card__heading{
-            color: #404c77;
-            font-weight: 700;
+        .future__image__container{
+            display: none !important;
         }
     }
+    .fututre__image-mobile{
+        display: block !important;
+    }
+} 
+// //         main section
+// .main{
+//     background: no-repeat center url("./../images/research-hero-desktop.png");
+//     width: 100%;
+//     height: 474px;
+//     .main__headings__container{
+//         .main__heading{
+//             font-family: "TTNorms";
+//             font-weight: 600;
+//             font-size: 3.5rem;
+//             margin-bottom: 5%;
+//         }
+//         .main__subtitle{
+//             font-family: "TTNorms";
+//             font-weight: 400;
+//             font-size: 1.5rem;
+//         }
+//     }
+// }
+
+// //compromises
+
+// .compromises{
+//     margin-top: 60px;
+//     .compromises__subtitle{
+//         font-family: "TTNorms";
+//         font-weight: 400;
+//         font-size: 16px;
+//         line-height: 26px;
+//         color: #383838;
+        
+//     }
+//     .compromises__card{
+//         font-family: "TTNorms";
+//         line-height: 26px;
+//         font-weight: 400;
+//         .compromises__card__heading{
+//             color: #404c77;
+//             font-weight: 700;
+//         }
+//     }
     
-}
+// }
 
-// metrics 
+// // metrics 
 
-.metrics__maters{
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
+// .metrics__maters{
+//     margin-top: 60px;
+//     margin-bottom: 60px;
+// }
 
-//benefits 
+// //benefits 
 
-.benefiits{
-    background: #f4f4f4;
-}
+// .benefiits{
+//     background: #f4f4f4;
+// }
